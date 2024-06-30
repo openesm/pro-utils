@@ -21,9 +21,12 @@ function run() {
         delete json['scripts']
         fs.writeJsonSync('temp/package.json', json, { spaces: 4 })
 
-        execSync('cd ./temp')
+        // 发布代码
+        process.chdir('temp')
         execSync('pnpm publish --no-git-checks')
 
+        // 移除临时发布目录
+        process.chdir('..')
         fs.removeSync('temp')
     } catch(e) {
         console.error(e)
