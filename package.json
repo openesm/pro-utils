@@ -1,27 +1,35 @@
 {
     "name": "@sumdoo/pro-utils",
-    "version": "0.0.1",
+    "version": "0.0.4",
     "type": "module",
     "scripts": {
+        "build": "vite build",
         "publish-lib": "node ./scripts/publish.js"
+    },
+    "exports": {
+        "./core": "./src/core/index.ts",
+        "./browser": "./src/browser/index.ts",
+        "./cipher": "./src/cipher/index.ts",
+        "./axios": "./src/axios/index.ts",
+        "./*": "./src/*"
     },
     "dependencies": {
         "@types/crypto-js": "^4.2.2",
         "@types/lodash-es": "^4.17.12",
-        "dayjs": "^1.11.11",
+        "dayjs": "^1.11.5",
         "lodash-es": "^4.17.21"
     },
     "devDependencies": {
         "@antfu/eslint-config": "^2.21.1",
         "@types/node": "^20.14.9",
-        "axios": "^1.7.2",
-        "crypto-js": "^4.2.0",
         "eslint": "^9.5.0",
         "fs-extra": "^11.2.0",
         "rollup-plugin-visualizer": "^5.12.0",
         "typescript": "^5.5.2",
         "vite": "^5.3.1",
         "vite-plugin-dts": "^3.9.1",
-        "vitest": "^1.6.0"
+        "vitest": "^1.6.0",
+        "axios": "^0.27.2",
+        "crypto-js": "^4.1.1"
     }
 }

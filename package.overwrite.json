@@ -19,19 +19,19 @@
             "types": "./dist/core.d.ts"
         },
         "./browser": {
-            "import": "./dist/core/index.js",
-            "require": "./dist/core/index.js",
-            "types": "./dist/core.d.ts"
+            "import": "./dist/browser/index.js",
+            "require": "./dist/browser/index.js",
+            "types": "./dist/browser.d.ts"
         },
         "./cipher": {
-            "import": "./dist/core/index.js",
-            "require": "./dist/core/index.js",
-            "types": "./dist/core.d.ts"
+            "import": "./dist/cipher/index.js",
+            "require": "./dist/cipher/index.js",
+            "types": "./dist/cipher.d.ts"
         },
         "./axios": {
-            "import": "./dist/core/index.js",
-            "require": "./dist/core/index.js",
-            "types": "./dist/core.d.ts"
+            "import": "./dist/axios/index.js",
+            "require": "./dist/axios/index.js",
+            "types": "./dist/axios.d.ts"
         },
         "./*": "./dist/*"
     }

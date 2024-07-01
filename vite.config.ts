@@ -2,8 +2,6 @@ import { defineConfig } from 'vite'
 import dts from 'vite-plugin-dts'
 import { resolve } from 'path'
 
-const dist_floder = resolve(__dirname, 'dist')
-
 // https://vitejs.dev/config/
 export default defineConfig({
     plugins: [
@@ -17,13 +15,13 @@ export default defineConfig({
         target: 'es2015',
         lib: {
             entry: {
-                'core': './src/core/index.ts',
+                'core'   : './src/core/index.ts',
                 'browser': './src/browser/index.ts',
-                'axios': './src/axios/index.ts',
-                'cipher': './src/cipher/index.ts',
+                'axios'  : './src/axios/index.ts',
+                'cipher' : './src/cipher/index.ts',
             },
             fileName: (_format, enteryName) => {
-                if (['core', 'browser'].includes(enteryName)) {
+                if (['core', 'browser', 'axios', 'cipher'].includes(enteryName)) {
                     return `${ enteryName }/index.js`
                 } else {
                     return `${ enteryName }.js`
@@ -45,7 +43,7 @@ export default defineConfig({
                 preserveModules: true,
                 preserveModulesRoot: 'src',
                 exports: 'named'
-            }
+            },
         }
     }
 })
