@@ -1,0 +1,13 @@
+{
+    "name"           : "pro-utils-repo",
+    "private"        : true,
+    "type"           : "module",
+    "devDependencies": {
+        "vite"                : "5.2.0",
+        "vite-plugin-dts"     : "3.7.3",
+        "typescript"          : "5.5.3",
+        "@antfu/eslint-config": "2.21.1",
+        "@types/node"         : "20.14.6",
+        "eslint"              : "8.57.0"
+    }
+}

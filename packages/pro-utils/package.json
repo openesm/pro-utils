@@ -1,0 +1,39 @@
+{
+    "name"   : "@sumdoo/pro-utils",
+    "version": "1.0.1",
+    "type"   : "module",
+    "private": true,
+    "scripts": {
+        "build:type": "vite build"
+    },
+    "exports": {
+        "./core": {
+            "types"  : "./types/core.d.ts",
+            "import" : "./src/core/index.ts",
+            "require": "./src/core/index.ts"
+        },
+        "./browser": {
+            "types"  : "./types/browser.d.ts",
+            "import" : "./src/browser/index.ts",
+            "require": "./src/browser/index.ts"
+        },
+        "./cipher": {
+            "types"  : "./types/cipher.d.ts",
+            "import" : "./src/cipher/index.ts",
+            "require": "./src/cipher/index.ts"
+        },
+        "./axios": {
+            "types"  : "./types/axios.d.ts",
+            "import" : "./src/axios/index.ts",
+            "require": "./src/axios/index.ts"
+        }
+    },
+    "dependencies": {
+        "dayjs"           : "1.11.5",
+        "lodash-es"       : "4.17.21",
+        "axios"           : "0.27.2",
+        "crypto-js"       : "4.1.1",
+        "@types/crypto-js": "4.2.2",
+        "@types/lodash-es": "4.17.12"
+    }
+}
