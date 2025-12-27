@@ -295,11 +295,24 @@ declare function nextDate(date: string | number | Date, amount?: number): string
 /** 下月同日 */
 declare function nextMonthSameDate(date: string | number | Date): string;
 
+/** 给定对象转 query 字符串 */
+export declare function objToQuery(obj: Record<string, string | number>, option?: {
+    encodeKey?: boolean;
+    encodeValue?: boolean;
+    prefix?: boolean;
+}): string;
+
 /** 上日 (可前进多日) */
 declare function prevDate(date: string | number | Date, amount?: number): string;
 
 /** 上月同日 */
 declare function prevMonthSameDate(date: string | number | Date): string;
+
+/** 给定 query 字符串转对象  */
+export declare function queryToObj(query_string: string, option?: {
+    decodeKey?: boolean;
+    decodeValue?: boolean;
+}): Record<string, string>;
 
 /** 替换数组项 */
 declare function replace<T>(list: T[], data: T, ...keys: (keyof T)[]): void;
